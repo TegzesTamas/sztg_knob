@@ -6,7 +6,7 @@ outer_h = 14;
 inner_d = 33;
 inner_h = 6;
 
-axle_d = 4.2;
+axle_d = 4;
 axle_bore_depth = outer_h - 2;
 
 metal_insert_d = 4 + inner_h;
@@ -43,9 +43,9 @@ difference() {
     translate([0, 0, -0.001]){
         cylinder(h = axle_bore_depth + 0.002, d = axle_d);
     }
-    translate(v = [0, -metal_insert_offset, 0]) {
-        metal_insert();
-    }
+    // translate(v = [0, -metal_insert_offset, 0]) {
+    //     metal_insert();
+    // }
     rotate(a = [0,0,-45]) {
         translate(v = [-axle_d/2-key_l/2, -key_w/2, 0]) {
             cube(size = [key_l, key_w, axle_bore_depth]);
