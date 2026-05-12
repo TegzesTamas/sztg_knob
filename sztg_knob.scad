@@ -1,17 +1,12 @@
-// Knob: hollow cylinder + blind center bore for axle
 $fn = 128;
 
-// Outer shell
 outer_d = 37.5;
 outer_h = 14;
 
-// Inner cavity (from bottom face)
 inner_d = 33;
 inner_h = 6;
 
-// Center axle: blind bore (does not go through full height)
 axle_d = 4.2;
-// Leave at least ~1 mm closed end; adjust if needed
 axle_bore_depth = outer_h - 2;
 
 metal_insert_d = 4 + inner_h;
@@ -20,7 +15,7 @@ metal_insert_l = 10;
 metal_insert_offset = 3;
 
 key_w = 1.5;
-key_l = 1.5;
+key_l = 2.5;
 
 module metal_insert(depth = metal_insert_l, width = metal_insert_w, length = metal_insert_l) {
     difference() {
